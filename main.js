@@ -1,4 +1,4 @@
-//mostrar prendas en tienda 
+//Mostrar prendas en tienda 
 document.addEventListener('DOMContentLoaded', function() {
     const tiendaContainer = document.getElementById('tiendaContainer');
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
@@ -33,17 +33,17 @@ document.addEventListener('DOMContentLoaded', function() {
         tiendaContainer.appendChild(divPrenda);
 
         botonAgregarCarrito.addEventListener('click', function() {
-            // Obtén el carrito del localStorage
+
             let carritoEnLocalStorage = JSON.parse(localStorage.getItem('carrito')) || [];
-            // Asegúrate de que carritoEnLocalStorage sea un array
+
             if (!Array.isArray(carritoEnLocalStorage)) {
                 carritoEnLocalStorage = [];
             }
-            // Agrega el ID de la prenda al carrito
+
             carritoEnLocalStorage.push(prenda.id);
-            // Guarda el carrito actualizado en el localStorage
+
             localStorage.setItem('carrito', JSON.stringify(carritoEnLocalStorage));
-            // Actualiza la variable carrito con los datos del localStorage
+
             carrito = carritoEnLocalStorage;
             console.log(`Producto "${prenda.nombre}" agregado al carrito.`);
             Swal.fire({
@@ -69,16 +69,12 @@ carritoIcono.addEventListener('click', function(event) {
     event.preventDefault();
     modalCarrito.style.display = 'block';
 
-    // Obtener los productos del carrito desde localStorage
     const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     
-    // Limpiar el contenidoModal antes de agregar las tarjetas de productos
     contenidoModal.innerHTML = '';
 
-    // Crear un objeto para almacenar los productos y sus cantidades
     const productosEnCarrito = {};
 
-    // Contar las cantidades de productos en el carrito
     carrito.forEach(productoId => {
         productosEnCarrito[productoId] = (productosEnCarrito[productoId] || 0) + 1;
     });
@@ -89,36 +85,31 @@ carritoIcono.addEventListener('click', function(event) {
         const producto = prendas.find(item => item.id === parseInt(productoId, 10));
         
         if (producto) {
-            // Crear una tarjeta para el producto
+
             const tarjetaProducto = document.createElement('div');
             tarjetaProducto.className = 'tarjeta-producto';
             tarjetaProducto.className = 'd-flex flex-column gap-1';
     
-            // Crear imagen del producto
             const imagenProducto = document.createElement('img');
             imagenProducto.src = producto.imagen;
             imagenProducto.alt = producto.nombre;
             imagenProducto.style.maxWidth = '100px';
             tarjetaProducto.appendChild(imagenProducto);
     
-            // Crear nombre del producto
             const nombreProducto = document.createElement('h3');
             nombreProducto.textContent = producto.nombre;
             tarjetaProducto.appendChild(nombreProducto);
     
-            // Crear precio del producto
             const precioProducto = document.createElement('p');
             precioProducto.textContent = `$${producto.precio.toFixed(2)}`;
             tarjetaProducto.appendChild(precioProducto);
     
-            // Crear cantidad del producto
             if (cantidad > 1) {
                 const cantidadProducto = document.createElement('span');
                 cantidadProducto.textContent = `Cantidad: ${cantidad}`;
                 tarjetaProducto.appendChild(cantidadProducto);
             }
     
-            // Crear botón de borrar
             const botonBorrar = document.createElement('button');
             botonBorrar.textContent = 'Eliminar';
             botonBorrar.className = 'boton-borrar';
@@ -129,10 +120,8 @@ carritoIcono.addEventListener('click', function(event) {
                 carritoIcono.click();
             });
     
-            // Agregar elementos a la tarjetaProducto
             tarjetaProducto.appendChild(botonBorrar);
     
-            // Agregar la tarjetaProducto al contenidoModal
             contenidoModal.appendChild(tarjetaProducto);
         }
     });
@@ -140,7 +129,7 @@ carritoIcono.addEventListener('click', function(event) {
 });
 
 function eliminarProductoDelCarrito(productoId) {
-    // Obtén el carrito del localStorage
+
     let carritoEnLocalStorage = JSON.parse(localStorage.getItem('carrito')) || [];
 
     // Elimina el producto con el ID especificado del carrito
@@ -149,7 +138,7 @@ function eliminarProductoDelCarrito(productoId) {
         carritoEnLocalStorage.splice(index, 1);
     }
 
-    // Guarda el carrito actualizado en el localStorage
+    // Guarda el carrito actualizado
     localStorage.setItem('carrito', JSON.stringify(carritoEnLocalStorage));
 }
 
@@ -166,7 +155,6 @@ window.addEventListener('click', function(event) {
     }
 });
 
-
 // Ordenar 
 // Filtra las prendas por orden
 
@@ -180,6 +168,7 @@ function ordenarPorMasReciente(prendas) {
     return prendas.slice().sort((a, b) => b.id - a.id);
 }
 const selectOrdenar = document.querySelector('.select-ordenar');
+
 // Evento change en select
 selectOrdenar.addEventListener('change', function() {
     const valorSeleccionado = selectOrdenar.value;
@@ -222,12 +211,9 @@ function mostrarPrendasFiltradas() {
 }
 console.log(tipoSeleccionado, colorSeleccionado, talleSeleccionado);
 
-
-
-
 // Mostrar las prendas en el DOM
 function mostrarPrendasEnDOM(prendas) {
-    contenedorPrendas.innerHTML = ''; // Vacía el contenedor
+    contenedorPrendas.innerHTML = '';
 
     prendas.forEach(prenda => {
         const divPrenda = document.createElement('div');
@@ -259,24 +245,23 @@ function mostrarPrendasEnDOM(prendas) {
         tiendaContainer.appendChild(divPrenda);
 
         botonAgregarCarrito.addEventListener('click', function() {
-            // Obtener el carrito del localStorage
+
             let carritoEnLocalStorage = JSON.parse(localStorage.getItem('carrito')) || [];
-            // Validar que carritoEnLocalStorage sea un array
+
             if (!Array.isArray(carritoEnLocalStorage)) {
                 carritoEnLocalStorage = [];
             }
-            // Agrega el ID de la prenda al carrito
+
             carritoEnLocalStorage.push(prenda.id);
-            // Guarda el carrito actualizado en el localStorage
-            localStorage.setItem('carrito', JSON.stringify(carritoEnLocalStorage));
+
+            localStorage.setItem('carrito', JSON.stringify(carritoEnLocalStorage))
+
             // Actualiza la variable carrito con los datos del localStorage
             carrito = carritoEnLocalStorage;
             console.log(`Producto "${prenda.nombre}" agregado al carrito.`);
             alert('Producto agregado al carrito');
         });
     });
-    // Agregar evento al botón "Agregar al carrito"
-    
 }
 
 // Selecciona todos los botones "Agregar al carrito"
