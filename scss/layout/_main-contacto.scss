@@ -1,0 +1,53 @@
+.contacto-main{
+    @include flex(row,wrap,center,center);
+}
+
+.bloque-contacto{
+    @extend .bloque-nosotros;
+    @include efecto-glass;
+    padding: 0;
+}
+
+.contacto-fieldset{
+    @include flex(none,wrap,none,none);
+    background-color: $color-principal;
+    font-size: 1.4375rem;
+    padding: 3.125rem;
+    gap: 1.875rem;
+    border-radius: 10px;
+}
+
+.form1{
+    @include flex(column,wrap,none,none);
+    gap: .3125rem;
+}
+
+.form2{
+    @extend .form1;
+}
+
+.form1{
+    .celdas1{
+        border: .0625rem;
+    }
+}
+
+.celda-mensaje{
+    border: .0625rem;
+    width: 17.625rem;
+    height: 18rem;
+}
+
+.boton-enviar{
+    input{
+        width: 4.0625rem;
+        height: 2.1875rem;
+        border: 0;
+        border-radius: .3125rem;
+        background-color: whitesmoke;
+        padding-top: .3125rem;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
+}

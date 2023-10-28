@@ -1,0 +1,61 @@
+@media screen and (min-width: 1440px){
+    .foto-portada{
+        width: 100%;
+        height: 31.25rem;
+    }
+    .tres-fotos{
+        @include flex(row,nowrap,center,center);
+        text-align: center;
+    }
+    .fotoback-tapados{
+        padding: 10.3125rem;
+        border-radius: 0px 5px 5px 0px;
+    }
+    .fotoback-jeans{
+        padding: 10.3125rem;
+        border-radius: 5px;
+    }
+    .fotoback-sweaters{
+        padding: 10.3125rem;
+        border-radius: 5px 0px 0px 5px;
+    }
+    .card-bufanda{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-jean{
+        display: flex;
+        flex-direction: column;
+    }
+    .bloque-contacto{
+    width: 75rem;
+    height: 62.5rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    }
+    .contacto-fieldset {
+    width: auto;
+    height: auto;
+    font-size: 1.4375rem;
+    padding: 3.125rem;
+    background-color: $color-principal;
+    display: flex;
+    flex-direction: row;
+    gap: 1.875rem;
+    }
+    .filtros1-b{
+        display: flex;
+    }
+    .bloque-nosotros{
+        width: 75rem;
+        height: 43.75rem;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+    .ubicacion-mapa-grande{
+        display: flex;
+    }
+    .ubicacion-mapa-chico{
+        display: none;
+    }
+}

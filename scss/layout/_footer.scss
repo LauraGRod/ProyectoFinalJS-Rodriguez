@@ -1,0 +1,37 @@
+footer{
+    @include flex(row,wrap,space-between,none);
+    font-family: $letra-cuerpo;
+    background-color: $color-secundario;
+    text-decoration: none;
+    padding: 3.125rem;
+    margin-top: .625rem;
+    div{
+        h4{
+            font-size: 1.25rem;
+        }
+        ul{
+            list-style: none;
+        }
+    }
+}
+
+.preguntas-footer{
+    gap: 3.125rem;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.footer1{
+    @include flex(row,wrap,none,none);
+    gap: 3.125rem;
+}
+
+.footer-iconos{
+    a{
+        text-decoration: none;
+        appearance: none;
+        color: transparent;
+    }
+}

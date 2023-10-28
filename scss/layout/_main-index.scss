@@ -1,0 +1,102 @@
+/* MAIN INDEX */
+
+main{
+    font-family: $letra-cuerpo;
+    margin-top: 5.4375rem;
+}
+
+/* FOTO PORTADA */
+
+.foto-portada{
+    background-image: url(../assets/img/foto-principal-completa.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 37.5rem;
+    background-color: #E3DAD5;
+    img{
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+/*TRES FOTOS JUNTAS*/
+
+.tres-fotos{
+    background-color: $color-principal;
+    @include flex(row,wrap,center,center);
+    text-align: center;
+    div{
+        h2{
+            font-family: $letra-cuerpo;
+            font-size: 2.1875rem;
+            align-self: center;
+            color: white;
+            margin: 0;
+        }
+    }
+}
+
+.fotoback-tapados{
+    background-image: url(../assets/img/tapados-foto-completa.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 15rem;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.fotoback-jeans{
+    @extend .fotoback-tapados;
+    background-image: url(../assets/img/jeans-foto-completa.jpg);
+    border-radius: 5px;
+}
+
+.fotoback-sweaters{
+    @extend .fotoback-tapados;
+    background-image: url(../assets/img/sweaters-foto-completa.jpg);
+    border-radius: 5px 0px 0px 5px;
+}
+
+/*CARROUSEL*/
+
+.carrousel{
+    @include flex(row,wrap,center,center);
+    background-color: $color-principal;
+    width: 100%;
+    gap: 2.5rem;
+    row-gap: 2.5rem;
+    padding-top: 1.5625rem;
+    padding-bottom: 1.5625rem;
+    div{
+        figcaption{
+            font-family: $letra-cuerpo;
+        }
+    }
+}
+
+.carrousel-cards{
+    border-radius: 5%;
+}
+
+/*INFO COMPRA*/
+
+.info-compra{
+    background-color: $color-secundario;
+}
+
+.info-compra div p{
+    justify-content: center;
+    text-align: center;
+    font-size: 1.375rem;
+} 
+
+.icono-refresh{
+    width: 6rem;
+}
+.icono-tarjeta{
+    width: 6.25rem;
+}
+.icono-auto{
+    @extend .icono-refresh;
+}

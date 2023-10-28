@@ -1,0 +1,51 @@
+@import "./utilities/mixins";
+@import "./utilities/variables";
+@import "./base/reset";
+@import "./base/typo";
+@import "./layout/body";
+@import "./layout/header";
+@import "./layout/main-index";
+@import "./layout/main-nosotros";
+@import "./layout/main-contacto";
+@import "./layout/main-ubicacion";
+@import "./layout/main-tienda";
+@import "./layout/footer";
+@import "./layout/media-320";
+@import "./layout/media-375";
+@import "./layout/media-425";
+@import "./layout/media-480";
+@import "./layout/media-768";
+@import "./layout/media-1024";
+@import "./layout/media-1440";
+@import "./utilities/animations";
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-contenido {
+    background-color: #fff;
+    max-width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+} 
+
+.cerrar-modal {
+    top: 10px; /* Ajusta la posición vertical según tu diseño */
+    right: 10px; /* Ajusta la posición horizontal según tu diseño */
+    font-size: 34px; /* Tamaño del texto de la "X" */
+    color: red; /* Color rojo para la "X" */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la "X" para indicar que es clickeable */
+}

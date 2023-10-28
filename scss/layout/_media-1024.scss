@@ -1,0 +1,130 @@
+@media screen and (min-width: 1024px){
+    main{
+        margin-top: 5.4375rem;
+    }
+    .foto-portada{
+        width: 100%;
+        height: 23.75rem;
+    }
+    .navbar{
+        display: none;
+    }
+    .navbar1{
+        display: flex;
+        ul{
+            display: flex;
+        }
+    }
+    .tres-fotos{
+        @include flex(row,nowrap,center,center);
+        text-align: center;
+    }
+    .fotoback-tapados{
+        padding: 6rem;
+        border-radius: 0 5px 5px 0;
+    }
+    .fotoback-jeans{
+        display: flex;
+        padding: 6rem;
+        border-radius: 5px;
+    }
+    .fotoback-sweaters{
+        padding: 6rem;
+        border-radius: 5px 0 0 5px;
+    }
+    .flecha-izq{
+        display: flex;
+    }
+    .flecha-der{
+        display: flex;
+    }
+    .card-bufanda{
+        display: none;
+    }
+    .card-jean{
+        display: none;
+    }
+    .card-botas{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-campera{
+        display: flex;
+        flex-direction: column;
+    }
+    .icono-refresh{
+        width: 5.375rem;
+    }
+    .icono-tarjeta{
+        width: 5.375rem;
+    }
+    .icono-auto{
+        width: 5.375rem;
+    }
+    .bloque-contacto{
+        width: 56.25rem;
+        height: 62.5rem;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .contacto-fieldset {
+        width: auto;
+        height: auto;
+        font-size: 1.4375rem;
+        padding: 3.125rem;
+        background-color: $color-principal;
+        display: flex;
+        flex-direction: row;
+        gap: 1.875rem;
+    }
+    .celda-mensaje{
+        width: auto;
+        height: 18rem;
+    }
+    .celdas1{
+        width: auto;
+    }
+    .filtros{
+        margin-top: 0;
+    }
+    .boton-filtros-solo{
+        display: none;
+    }
+    .filtros {
+        .filtros1{
+            h2{
+                display: flex;
+            }
+            .filtros1-b{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+    }
+    .filtros{
+        .filtros1{
+            .filtros1-a{
+                display: none;
+            }
+        }
+    }
+    .bloque-nosotros{
+        width: 56.25rem;
+        height: 37.5rem;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .bloque-ubicacion{
+        height: 43.75rem;
+    }
+    .ubicacion-mapa-grande{
+        display: flex;
+    }
+    .ubicacion-mapa-chico{
+        display: none;
+    }
+}

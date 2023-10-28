@@ -1,0 +1,26 @@
+body{
+    background-color: $color-principal;
+    font-family: $letra-cuerpo;
+    font-weight: 400;
+}
+
+.body-nosotros{
+    background-image: url("../assets/img/fondobody-nosotros.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.body-contacto{
+    background-image: url("../assets/img/fondobody-contacto.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.body-ubicacion{
+    background-image: url("../assets/img/fondoboy-ubicacion.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

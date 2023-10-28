@@ -1,0 +1,115 @@
+
+.filtros{
+    @include flex(row,wrap,space-between,center);
+    background-color: $color-secundario;
+    padding: .625rem;
+    width: 100%;
+    .filtros1{
+        @include flex(row,wrap,none,center);
+        padding-left: 1.25rem;
+        gap: 1.25rem;
+        .filtros1-b{
+            @include flex(row,wrap,none,none);
+            gap: .625rem;
+        }
+        h2{
+            padding-top: .625rem;
+            margin: 0;
+        }
+    }
+    .filtros2{
+        @include flex(row,wrap,none,none);
+        padding-right: 1.375rem;
+    }
+}
+
+.tienda-completa{
+    @include flex(none,wrap,center,center);
+    padding: 1.875rem;
+    gap: 1.25rem;
+}
+
+.tienda-nombreyprecios{
+    @include flex(row,wrap,space-between,none);
+}
+
+.imgs-tienda{
+    border-radius: 5%;
+}
+
+.select-filtros{
+    width: 6.25rem;
+    border-radius: .3125rem;
+    background-color: whitesmoke;
+    border: 0;
+    padding-top: .3125rem;
+    align-items: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.select-ordenar{
+    width: 7.5rem;
+    border-radius: .3125rem;
+    background-color: whitesmoke;
+    border: 0;
+    padding-top: .3125rem;
+    align-items: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contenedorImagen{
+    position: relative;
+    display: inline-block;
+}
+
+.btn-comprar{
+    position: absolute;
+    width: 8.75rem;
+    height: 1.875rem;
+    border: 0;
+    border-radius: .3125rem;
+    background-color: whitesmoke;
+    padding-top: .3125rem;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    bottom: .625rem;
+    right: .625rem;
+}
+
+.btn-agregar-carrito{
+    width: 8.75rem;
+    height: 1.875rem;
+    padding-top: .3125rem;
+    border-radius: .3125rem;
+    border: 0;
+    background-color: whitesmoke;
+    cursor: pointer;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+}
+
+.boton-borrar{
+    width: 4.375rem;
+    padding-top: .3125rem;
+    border-radius: .3125rem;
+    border: 0;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.261);
+}
+
+
+.modal-contenido{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.contenidomodal{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,18 @@
+.main-ubicacion{
+    @include flex(none,wrap,center,center);
+}
+
+.bloque-ubicacion{
+    @extend .bloque-nosotros;
+    height: 900px;
+    .ubicacion-titulo{
+        h2{
+            font-weight: 500;
+        }
+    }
+}
+
+.contenido-ubicacion{
+    @include flex(row,wrap,center,center);
+    gap: 20px;
+}
