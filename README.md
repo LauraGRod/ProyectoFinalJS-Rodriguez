@@ -1,2 +1,3 @@
-Entrega Final
+Proyecto Final
 Curso coder Javascript
+Laura Rodriguez
